@@ -1,0 +1,565 @@
+* {
+     margin: 0px;
+     padding: 0p;
+     box-sizing: border-box;
+}
+:root {
+     --primary-color: #c72727;
+     --secondary-color: #f99500;
+     --light-color: #f3f3f3;
+     --dark-color: #333;
+     --max-width: 1100px;          
+}
+
+.category {
+     --sports-color: #f99500;
+     --ent-color: #a66bbe;
+     --tech-color: #009cff;
+}
+
+/* core styling */
+body {
+     background-color: #ffffff;
+     font-family: 'Lato', sans-serif;
+     line-height: 1.5;     
+}
+a {
+     color: #333;
+     text-decoration: none;
+}
+ul {
+     list-style: none;     
+}
+img {
+     width:100% !important;
+     
+}
+h1, h2, h3, h4, h5, h6 {
+     font-family: 'Staatliches', cursive;
+     margin-bottom: .55rem;
+     line-height: 1.3;
+}
+#indent {
+     margin-left: 2rem;
+}
+p {
+     margin: 0.5rem;
+}
+
+/* Ultility elements/ variables */
+.container {
+     max-width: var(--max-width);
+     margin: auto;
+/* this was omitted: padding: 0 2 rem;*/     
+     overflow: hidden;
+}
+.category {
+     display: inline-block;
+     color: #fff;
+     font-size: 0.6rem;
+     text-transform: uppercase;
+     width: 10rem;     
+     margin-bottom: 1.5rem;
+     padding: 1rem .5rem;
+}
+.category-sports {
+     background: var(--sports-color);     
+     align-items: center;
+     text-align: center;
+     padding-bottom: 1rem;
+}
+.category-ent {
+     background: var(--ent-color);
+
+}
+.category-tech {
+     background: var(--tech-color);     
+}
+/* button attributes */
+.btn {
+     display: inline-block;
+     border: solid 1px #f99500;
+     border-radius: 8%;
+     background: var(--sports-color);
+     color: #fff;
+     padding: 0.2rem 2.5rem
+}
+.btn-light {
+     background: var(--light-color);
+}
+.btn-primary {
+     background: var(--primary-color);     
+}
+nav .btn-primary-nav {             
+     background: #ff0000;
+     color: #ffffff;
+}
+#main-nav .btn-primary-nav:hover {     
+     border: none;
+     padding: auto;
+     background: #f99500;
+     color: #fff;
+}
+.btn-secondary {
+     background: var(--secondary-color);
+}
+.btn-article-nav {
+     background-color: #ffffff;
+     color: #000000;
+     font-weight: bold;
+     opacity: .9;
+}
+.btn-article-nav:hover {
+     color: #ff0000;
+}
+.btn-block {
+     display: inline-block;
+     width: auto;
+     text-align: center;     
+}
+/* column review background color */
+.football-card {
+     background-color: #fff;
+     padding: 1rem;
+}
+
+.bg-dark {
+     background: var(--dark-color);
+     padding: 1rem;
+}
+.bg-primary {
+     background: var(--primary-color);
+     padding: 1rem;
+}
+.bg-secondary {
+     background: var(--secondary-color);
+     padding: 1rem;
+}
+.bg-dark h1, 
+.bg-dark h2, 
+.bg-dark h3 
+.bg-dark a
+.bg-primary h1, 
+.bg-primary h2, 
+.bg-primary h3 
+.bg-primary a
+.bg-secondary h1, 
+.bg-secondary h2, 
+.bg-secondary h3 
+.bg-secondary a {
+         color: white;
+}
+
+.padding-1 { padding: 1.5rem 0; }
+.padding-2 { padding: 2rem 0; }
+.padding-3 { padding: 3rem 0; }
+.p-1 { padding: 1.5rem 0; }
+.p-2 { padding: 2rem 0; }
+.p-3 { padding: 3rem 0; }
+
+.l-heading {
+     font-size: 3rem;
+}
+
+.list li {
+     padding: 0.5rem 0px;
+     border-bottom: #555 dotted 1px;
+     width: 80%;
+}
+.list li a:hover {
+     color: var(--primary-color) !important; 
+}
+
+/* Inner "About webpage" container */
+.page-container {
+     display: grid;
+     grid-template-columns: 5fr 2fr;
+     margin-top: 2rem;
+     margin-bottom: 2rem;
+     grid-gap: 1.5rem;
+}
+.page-container > *:first-child {
+     grid-row: 1 / span 3;
+}
+
+/* Navigation Links */
+#main-nav .btn {
+     background: white;
+     color: blue;
+     margin: auto;
+}
+#main-nav {     
+     background-color: #ffffff;     
+     top: 0;
+     z-index: 2;
+/* 'sticky' attribute insures nav box stationary
+on top of webpage */          
+     position: sticky;
+     background-color: red;           
+}
+
+#main-nav .container {          
+     display: grid;
+     grid-template-columns: 20rem 30rem 30rem 30rem;     
+     margin-left: auto;  
+     margin-right: auto;
+     padding-left: 100px absolute;
+     padding-right: 100px;   
+     align-items: center;
+     text-align: center;
+              
+}
+#main-nav h1 {
+     padding: 0px;
+}
+#main-nav ul {
+/* Questionable entry: justify-self: end;
+ */     
+     justify-self: auto;     
+     display: flex;
+     flex-direction: row;
+}
+#main-nav ul li a {
+     padding: 1.5rem;
+     font-weight: bold;
+}
+#main-nav ul li a .current {
+     background: var(--primary-color);
+     color: #fff;
+}
+#main-nav ul li a:hover {
+     background: var(--light-color);
+     color: var(--dark-color);
+}
+#main-nav .social {
+     background: red;
+     align-items: left;     
+}
+#main-nav .social i {
+     color: rgb(97, 4, 4);
+     margin-right: .5rem;
+}
+#main-nav .social i:hover {
+     color: #ffbb00;
+}
+
+/* Showcase */
+#showcase {
+     color: beige;
+     background: red;
+     padding: 2rem;
+     position: relative;
+}
+#showcase::before {
+/* this is questionable: content: ' '; */ 
+     content: ' ';
+     background: url("img/chiefs_offensive2.jpg") no-repeat; 
+     
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     opacity: 0.8;    
+}
+#showcase .showcase-container {
+     display: grid;
+/* the code below will divide the pic to 
+half composition; other pic view */     
+     grid-template-columns: repeat(2, 1fr);
+     justify-content: center;
+     align-items: center;
+     text-align: left;
+     height: 70vh;
+}
+#showcase .showcase-content {
+     z-index: 1;     
+}
+#showcase .showcase-content p {
+     margin-bottom: 1rem;
+}
+
+/* Home Articles */
+
+#home-articles .article-container {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 1rem;
+}
+#home-articles .article-container > *:nth-child(6) {
+    padding-top: 0px;
+    margin-top: -60px;
+}
+
+.container {
+     display: grid;
+     grid-template-columns: (repeat 4, 1fr); 
+     text-align: center;     
+     grid-gap: 2rem;
+     padding-bottom: 0px;
+     margin-top: 0px;
+     margin-bottom: 0px;    
+}
+
+#home-articles .article-container > *:first-child
+#home-articles .article-container > *:last-child {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-gap: 1rem;
+     align-items: center;
+/*  Note: below code allows first child (first inline block
+to expand */     
+     grid-column: 1 span 1;
+}
+#home-articles .article-container > *:last-child {
+     grid-column: 1 span 1;
+     align-items: center;
+     height: auto;
+     width: auto;     
+}
+
+
+/* Article Webpage CSS attributes */
+#article-main-nav, section {
+     padding: 0px;
+     margin: 0px;
+     background-color: #fff;
+}
+#article-main-nav .social a {
+     color: rgb(221, 42, 42);
+}
+#article-main-nav img {     
+     margin: 0px;
+     width: 15vh;
+     height: 10vh;         
+}
+#article-main-nav .container {
+     display: grid;
+     grid-template-columns: 8fr 4fr 1.5fr 0.5fr;
+     background-color: #fff;
+     padding-top: 1rem;
+     padding-bottom: -30px;          
+     align-items: center;
+     text-align: center;
+     margin-right: 0px;
+     margin-left: 75px;    
+}
+
+#article-main-nav .btn-primary-nav {
+     display: grid;
+     grid-template-columns: 1fr;     
+     font-size: 1.2rem;
+     color: orange;
+}
+#article-main-nav .btn-primary-nav:hover {
+     color: blue;
+}
+ins {
+     margin-left: 55px;
+     z-index: 1;
+}
+
+/* Main Showcase Pic, Intro, and buttom */
+section img {     
+     margin-top: 0px;
+}
+section p {
+     text-align: left;
+     margin-left: 30px;
+     margin-right: 30px;
+}
+section h1 {     
+     background-color: var(--primary-color);
+     padding: 20px 20px;
+     margin-top: -2rem;
+     margin-bottom: 2rem;
+}
+
+aside .card ul {
+     text-align: left;
+     margin-left: 5rem;     
+}
+aside p {
+     margin-top: 20px;
+     margin-left: 40px;
+}
+
+
+#join {
+     margin-top: -10px;
+     padding-top: 25px;
+     margin-bottom: 100px;
+}
+#join h3 {
+     color: #fff;
+}
+
+#category {
+     background:orange;
+     align-items: left; 
+     text-align: left;
+     margin-right: 0px;     
+     padding-top: 55px;
+     padding-bottom: 75px;     
+}
+#category h2 {
+     color: #fff;
+     align-items: center;
+     text-align: center;
+     padding-bottom: 25px;
+}
+#category ul {
+     padding-left: 0px;
+     margin-left: 50px;
+}
+#article-main-footer{
+     background-color: black;
+     color: #fff;                  
+     align-items: center;
+     text-align: center;
+     overflow: hidden;     
+}
+#article-main-footer .article-footer-container {
+     display: grid;
+     grid-template-columns:  30rem 20rem 30rem;
+     grid-gap: 1.2rem;     
+}
+#article-main-footer .article-footer-container img {
+     height: 20%; 
+     width: 100%;
+     padding-top: 5px; 
+     padding-left: 35px;
+     padding-right: 35px;      
+}
+#article-main-footer .footer-container h2 > :nth-child(3) {
+     align-items: center;               
+}
+
+footer .footer-container h3 {
+     align-items: center;
+}
+#article-main-footer h1, h2, h3 {
+     text-align: center;
+     align-items: center;
+}
+#article-main-footer li {
+     color: #fff;
+     text-align: center;
+     margin-left: 18px;
+}
+#article-main-footer .article-footer-container img {
+     height: 75%;
+     width: 75%;
+     border-radius: 9%;     
+}
+
+#article-main-footer .article-footer-container {
+     background: black;
+     grid-column: 1 / span 3;      
+     align-items: center;
+     text-align: center;
+     font-size: 1rem;
+     margin-left: 20px;
+     padding-top: 20px;
+     padding-bottom: 20px;     
+}
+
+#article-main-footer .article-footer-container
+ input[type='email'] {
+     width: 90%;
+     padding: 0.5rem;
+     margin-bottom: 0.5rem;     
+}
+#article-main-footer .article-footer-container input[type='submit'] {
+     width: 90%;
+}
+footer .copyright {
+     background-color: var(--dark-color);
+     padding-top: 15px;
+     padding-bottom: 15px;
+     margin-top: 15px;
+     margin-bottom: -30px;
+     overflow: auto;
+}
+footer .copyright p {     
+     margin-left: 98px;
+}
+
+/* Homepage attributes / Footer attributes */
+#main-footer{
+     background-color: black;
+     color: #fff;
+     padding-bottom: 0px;
+     margin-bottom: -25px;
+     align-items: center;
+     text-align: center;
+}
+
+/* Index Webpage Footer */
+
+#main-footer .footer-container h2 > :nth-child(3) {
+     align-items: center;
+    text-align: center;           
+}
+#main-footer img {
+     width: 25%;
+     height: 2.5rem;
+}
+#main-footer h1, h2, h3 {
+     text-align: center;
+     align-items: center;
+}
+#main-footer a {
+     color: #fff;
+     text-align: center;
+     align-items: center;     
+}
+#main-footer .footer-container > *:last-child {
+     background:var(--dark-color);
+     grid-column: 1 / span 4;
+     padding: 0.2rem;
+     text-align: center;
+     font-size: 0.75rem;
+}
+
+#main-footer .footer-container input[type='email'] {
+     width: 90%;
+     padding: 0.5rem;
+     margin-bottom: 0.5rem;     
+}
+#main-footer .footer-container input[type='submit'] {
+     width: 90%;
+}
+
+/* About Webpage Attributes */
+
+#about-main-footer{
+     background-color: black;
+     color: #fff;
+     padding-bottom: 0px;
+     margin-bottom: -25px;
+     align-items: center;
+     text-align: center;
+}
+#about-main-footer .container{     
+     grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+     padding-top: 20px;       
+}
+
+#about-main-footer .footer-container > *:last-child {
+          background:var(--dark-color);
+          grid-column: span 5;
+          padding: 0.2rem;
+          align-items: center;
+          font-size: 0.75rem;              
+}
+
+
+
+
+
+
+
+
+
+
